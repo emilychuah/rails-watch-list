@@ -1,0 +1,23 @@
+<h1><%= @list.name %></h1>
+
+<% if @list.movies.size <= 1 %>
+  <%= "#{@list.movies.size} movie" %>
+<% else %>
+  <%= "#{@list.movies.size} movies" %>
+<% end %>
+
+<%= link_to new_list_bookmark_path(@list) do %>
+  <p>Add a movie</p>
+<% end %>
+
+<% @list.movies.each do |movie| %>
+  <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
+  <img src="<%= movie.poster_url %>" alt="Movie poster">
+  <%= movie.title %>
+  <%= movie.rating %>
+  <%= movie.overview %>
+  <%= link_to "delete",
+              bookmark_path(bookmark),
+              method: :delete,
+              data: { confirm: "Are you sure?" } %>
+<% end %>

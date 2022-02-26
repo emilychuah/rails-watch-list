@@ -1,0 +1,14 @@
+<h1>My lists</h1>
+<ul>
+  <% @lists.each do |list| %>
+    <li><%= link_to list.name, list_path(list) %></li>
+     <%= link_to "delete",
+              list_path(list),
+              method: :delete,
+              data: { confirm: "Are you sure?" } %>
+  <% end %>
+</ul>
+
+<%= link_to new_list_path do %>
+  <p>Create a movie list</p>
+<% end %>

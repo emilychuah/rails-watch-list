@@ -16,7 +16,7 @@ puts "Creating movies..."
 url = "http://tmdb.lewagon.com/movie/top_rated"
 movies_serialized = URI.open(url).read
 movies = JSON.parse(movies_serialized)
-top_20_movies = movies["results"].first(20)
+top_20_movies = movies["results"]
 
 top_20_movies.each do |movie|
   Movie.create(
