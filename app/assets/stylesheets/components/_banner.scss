@@ -1,0 +1,27 @@
+.banner {
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(asset_path('banner.png'));
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  height: 500px;
+
+  h1 {
+    margin: 0;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+
+  h3 {
+    font-size: 28px;
+    color: white;
+    opacity: .7;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  }
+}
+
+.typed-js {
+  min-height: 33.6px;
+}
