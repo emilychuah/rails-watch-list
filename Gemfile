@@ -56,3 +56,6 @@ gem "simple_form"
 
 # Dotenv gem
 gem 'dotenv-rails', groups: [:development, :test]
+
+# Cloudinary gem
+gem 'cloudinary', '~> 1.16.0'
